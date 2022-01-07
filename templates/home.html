@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Home</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+      <h2>Hello World</h2>
+
+      <form action="{% url 'send-mail' %}" method="POST">
+        {% csrf_token %}
+        <div>
+            <label for="name">Name: </label>
+            <input id="name" name="name" type="text" placeholder="Enter Name">
+        </div>
+        <div>
+            <label for="subject">Subject: </label>
+            <input id="subject" name="subject" type="text" placeholder="Type Subject">
+        </div>
+        <div>
+            <label for="name">Message: </label>
+            <input id="msg" name="message" type="text" placeholder="Enter Message">
+        </div>
+        <input type="submit" value="Send Email">
+      </form>
+        
+        <script src="" async defer></script>
+    </body>
+</html>
